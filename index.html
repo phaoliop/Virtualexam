@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximun-scale=1.0, minimun-scale=1.0">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    
+    <title>Principal</title>
+
+    <!-- 3rd party css files -->
+    <meta property="og:title" content="Mega Cursos Online" />
+    <meta property="og:description" content="Educacion para todos." />
+    <meta property="og:image" content="http://i64.tinypic.com/1zx8nc4.png" /> 
+    <meta property="og:url" content="http://megacursos.online" />
+    
+    <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon" />
+    <link rel="stylesheet" href="css/estilos.css">
+</head>
+<body onload="cronometrar(0,0,15);">
+    <div class="jumbotron jumbotron-fluid row pt-2 pb-2">
+        <div class="col-3 pt-1 p1">Evaluación</div>
+        <div class="col-2 pt-1 p1">Preguntas: 12</div>
+        <div class="col-2 pt-1 p1">[EXM XX] - Evaluación</div>
+        <div class="col-2 pt-1 p1">
+        	<strong style="margin-right: 5px">Tiempo: </strong>
+        	<!--Cronometro-->
+        	<span id="Horas">00</span>
+        	<span id="Minutos">: 00</span>
+        	<span id="Segundos">: 00</span>
+        	<!--Fin Cronometro-->
+        </div>
+        <div class="col-3"><button class="btn btn-danger" type="submit">Finalizar Examén</button></div>
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="botones col-lg-3">
+                <h3 class="p1">Lista de Preguntas</h3>
+                <hr>
+                <button type="button" class="mb-2 btn btn-outline-primary tablink" style="width: 4rem;" onclick="openCity('pre1', this, '#cce5ff')" id="defaultOpen">01.
+                    <div class="alert alert-primary" role="alert">!</div>
+                </button>
+                <button type="button" class="mb-2 btn btn-outline-primary tablink" style="width: 4rem;" onclick="openCity('pre2', this, '#cce5ff')">02.
+                        <div class="alert alert-primary" role="alert">!</div>
+                </button>
+                <button type="button" class="mb-2 btn btn-outline-primary tablink" style="width: 4rem;" onclick="openCity('pre3', this, '#cce5ff')">03.
+                        <div class="alert alert-primary" role="alert">!</div>
+                </button>
+                <button type="button" class="mb-2 btn btn-outline-success tablink" style="width: 4rem;">04.
+                            <div class="alert alert-success" role="alert">B.</div>
+                </button>
+                <button type="button" class="mb-2 btn btn-outline-success" style="width: 4rem;">05.
+                    <div class="alert alert-success" role="alert">C.</div>
+                </button>
+                <button type="button" class="mb-2 btn btn-outline-success" style="width: 4rem;">06.
+                        <div class="alert alert-success" role="alert">A.</div>
+                </button>
+                <button type="button" class="mb-2 btn btn-outline-primary" style="width: 4rem;">07.
+                        <div class="alert alert-primary" role="alert">!</div>
+                </button>
+                <button type="button" class="mb-2 btn btn-outline-primary" style="width: 4rem;">08.
+                            <div class="alert alert-primary" role="alert">!</div>
+                </button>
+                <button type="button" class="mb-2 btn btn-outline-success" style="width: 4rem;">09.
+                    <div class="alert alert-success" role="alert">C.</div>
+                </button>
+                <button type="button" class="mb-2 btn btn-outline-success" style="width: 4rem;">10.
+                        <div class="alert alert-success" role="alert">A.</div>
+                </button>
+                <button type="button" class="mb-2 btn btn-outline-primary" style="width: 4rem;">11.
+                        <div class="alert alert-primary" role="alert">!</div>
+                </button>
+                <button type="button" class="mb-2 btn btn-outline-primary" style="width: 4rem;">12.
+                            <div class="alert alert-primary" role="alert">!</div>
+                </button>
+            </div>
+            <div class="preguntas col-lg-9">
+                <div class="p1" style="text-align:right;">
+                    <span style="font-size:28px">1</span>
+                    <span style="font-size:13px">/12 preguntas</span>
+                </div>
+                <div class="sep" style=""></div>
+                <!--Primera Pregunta-->
+                <div id="pre1" class="tabcontent">
+                <h1 class="p1">¿Aqui va la primera pregunta?</h1>
+                <hr>
+                <form class="was-validated">
+                    <div class="custom-control custom-radio">
+                        <input type="radio" class="custom-control-input" id="customControlValidation1" name="radio-stacked-1" value="A" required>
+                            <label class="custom-control-label" for="customControlValidation1">A. Respuesta 1</label>
+                    </div>
+                    <div class="custom-control custom-radio">
+                        <input type="radio" class="custom-control-input" id="customControlValidation2" name="radio-stacked-1" value="B" required>
+                        <label class="custom-control-label" for="customControlValidation2">B. Respuesta 2</label>
+                    </div>
+                    <div class="custom-control custom-radio">
+                        <input type="radio" class="custom-control-input" id="customControlValidation3" name="radio-stacked-1" value="C" required>
+                        <label class="custom-control-label" for="customControlValidation3">C. Respuesta 3</label>
+                    </div>
+                    <div class="custom-control custom-radio">
+                        <input type="radio" class="custom-control-input" id="customControlValidation4" name="radio-stacked-1" value="D" required>
+                        <label class="custom-control-label" for="customControlValidation4">D. Respuesta 4</label>
+                    </div>
+                    <div class="custom-control custom-radio mb-3">
+                        <input type="radio" change="radioChange('E')" class="custom-control-input" id="customControlValidation5" name="radio-stacked-1" value="E" required>
+                        <label class="custom-control-label" for="customControlValidation5">E. Respuesta 5</label>
+                        <div class="invalid-feedback">Debes elegir una opcion </div>
+                    </div>
+                    <hr style="background-color:#adaeae; border:none; height:1px; font-family:Calibri; font-size:12px;">
+                    <button class="btn btn-primary" type="submit">-> | Siguiente</button>
+                </form>
+                </div>
+                <!--Fin Primera Pregunta-->
+                <!--Segunda Pregunta-->
+                <div id="pre2" class="tabcontent">
+                <h1 class="p1">¿Aqui va la segunda pregunta?</h1>
+                <hr>
+                <form class="was-validated">
+                    <div class="custom-control custom-radio">
+                        <input type="radio" class="custom-control-input" id="customControlValidation6" name="radio-stacked-2" value="A" required>
+                            <label class="custom-control-label" for="customControlValidation6">A. Respuesta 1</label>
+                    </div>
+                    <div class="custom-control custom-radio">
+                        <input type="radio" class="custom-control-input" id="customControlValidation7" name="radio-stacked-2" value="B" required>
+                        <label class="custom-control-label" for="customControlValidation7">B. Respuesta 2</label>
+                    </div>
+                    <div class="custom-control custom-radio">
+                            <input type="radio" class="custom-control-input" id="customControlValidation8" name="radio-stacked-2" value="C" required>
+                            <label class="custom-control-label" for="customControlValidation8">C. Respuesta 3</label>
+                    </div>
+                    <div class="custom-control custom-radio">
+                        <input type="radio" class="custom-control-input" id="customControlValidation9" name="radio-stacked-2" value="D" required>
+                        <label class="custom-control-label" for="customControlValidation9">D. Respuesta 4</label>
+                    </div>
+                    <div class="custom-control custom-radio mb-3">
+                        <input type="radio" class="custom-control-input" id="customControlValidation10" name="radio-stacked-2" value="E" required>
+                        <label class="custom-control-label" for="customControlValidation10">E. Respuesta 5</label>
+                        <div class="invalid-feedback">Debes elegir una opcion </div>
+                    </div>
+                    <hr style="background-color:#adaeae; border:none; height:1px; font-family:Calibri; font-size:12px;">
+                    <button class="btn btn-primary" type="submit">-> | Siguiente</button>
+                </form>
+                </div>
+                <!--Fin Segunda Pregunta-->
+                <!--Tercera Pregunta-->
+                <div id="pre3" class="tabcontent">
+                <h1 class="p1">¿Aqui va la tercera pregunta?</h1>
+                <hr>
+                <form class="was-validated"  data-question="">
+                    <div class="custom-control custom-radio">
+                        <input type="radio" class="custom-control-input" id="customControlValidation11" name="radio-stacked-3" required>
+                        <label class="custom-control-label" for="customControlValidation11">A. Respuesta 1</label>
+                    </div>
+                    <div class="custom-control custom-radio">
+                        <input type="radio" class="custom-control-input" id="customControlValidation12" name="radio-stacked-3" required>
+                        <label class="custom-control-label" for="customControlValidation12">B. Respuesta 2</label>
+                    </div>
+                    <div class="custom-control custom-radio">
+                        <input type="radio" class="custom-control-input" id="customControlValidation13" name="radio-stacked-3" required>
+                        <label class="custom-control-label" for="customControlValidation13">C. Respuesta 3</label>
+                    </div>
+                    <div class="custom-control custom-radio">
+                        <input type="radio" class="custom-control-input" id="customControlValidation14" name="radio-stacked-3" required>
+                        <label class="custom-control-label" for="customControlValidation14">D. Respuesta 4</label>
+                    </div>
+                    <div class="custom-control custom-radio mb-3">
+                        <input type="radio" class="custom-control-input" id="customControlValidation15" name="radio-stacked-3" required>
+                        <label class="custom-control-label" for="customControlValidation15">E. Respuesta 5</label>
+                        <div class="invalid-feedback">Debes elegir una opcion </div>
+                    </div>
+                    <hr style="background-color:#adaeae; border:none; height:1px; font-family:Calibri; font-size:12px;">
+                    <button class="btn btn-primary" type="submit">-> | Siguiente</button>
+                </form>
+                </div>
+                <!--Fin Tercera Pregunta-->
+            </div>
+        </div>
+    </div>
+    <script src="js/jquery-3.2.1.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/prueba.js"></script>
+    <script type="text/javascript">
+    	//Tiempo de ejemplo
+    	var segundos = 0;
+		var minutos = 0;
+		var horas = 0;
+		var fin_time = 0;
+
+		function cronometrar(shoras, sminutos, ssegundos) {
+			horas = shoras;
+			minutos = sminutos;
+			segundos = ssegundos;
+			if (horas < 10) { horas = "0"+horas }
+			Horas.innerHTML = horas;
+			if (minutos < 10) { minutos = "0"+minutos }
+			Minutos.innerHTML = ":" + minutos;
+			if (segundos < 10) { segundos = "0"+segundoss }
+			Segundos.innerHTML = ":" + segundos;
+			inicio();
+		}
+
+		function inicio () {
+		  //Control cronometro
+		  if (fin_time == 0) {
+		  	control = setInterval(cronometro,1000);
+		  } else {
+		  	clearInterval(control);
+		  }
+		  
+		}
+
+		function cronometro () {
+		  
+		  if (horas!=0 || minutos!=0 || segundos!=0) {
+		    //Cronometro
+		    if (segundos != 0) {
+		      segundos -= 1;
+		      if (segundos < 10) { segundos = "0"+segundos }
+		      Segundos.innerHTML = ":" + segundos;
+		    }
+		    else {
+		      if (minutos != 0) {
+		        segundos = 59;
+		        minutos -= 1;
+		        if (minutos < 10) { minutos = "0"+minutos }
+		        Segundos.innerHTML = ":" + segundos;
+		        Minutos.innerHTML = ":" + minutos;
+		      }
+		      else {
+		        if (horas != 0) {
+		          segundos = 59;
+		          minutos = 59;
+		          horas -= 1;
+		          if (horas < 10) { horas = "0"+horas }
+		          Segundos.innerHTML = ":" + segundos;
+		          Minutos.innerHTML = ":" + minutos;
+		          Horas.innerHTML = horas;
+		        }
+		      }
+		    }
+		    
+		  }
+		  else {
+		  	fin_time = 1;
+		    clearInterval(control);
+		    segundos = 0;
+		    minutos = 0;
+		    horas = 0;
+		    Segundos.innerHTML = ":00";
+		    Minutos.innerHTML = ":00";
+		    Horas.innerHTML = "00";
+		    alert("Se ha terminado tu tiempo");
+		  }
+		  
+		  
+		}
+
+    </script>
+    <script>
+    var rb=document.querySelectorAll('input[name="radio-stacked-1"]')
+    // rb.forEach(function(inst){
+    //   inst.onchange=function(e){
+    //     console.log(e.target.value)
+    //     document.querySelector("#defaultOpen").innerHTML=e.target.value;
+    //   };
+    // })
+    console.log(rb)
+
+    $('input[name="radio-stacked-1"]').on('change',function(e){
+      $("#defaultOpen .alert").html($(this).val())
+    })
+    // 
+
+    function openCity(cityName, elmnt, color) {
+    // Hide all elements with class="tabcontent" by default */
+    var i, tabcontent, tablinks;
+    tabcontent = document.getElementsByClassName("tabcontent");
+    for (i = 0; i < tabcontent.length; i++) {
+        tabcontent[i].style.display = "none";
+    }
+
+
+    // Remove the background color of all tablinks/buttons
+    tablinks = document.getElementsByClassName("tablink");
+    for (i = 0; i < tablinks.length; i++) {
+        tablinks[i].style.backgroundColor = "";
+    }
+
+    // Show the specific tab content
+    document.getElementById(cityName).style.display = "block";
+
+    // Add the specific color to the button used to open the tab content
+    elmnt.style.backgroundColor = color;
+}
+
+// Get the element with id="defaultOpen" and click on it
+document.getElementById("defaultOpen").click(); 
+    </script>
+   
+</body>
+</html>
